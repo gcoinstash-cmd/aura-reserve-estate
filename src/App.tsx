@@ -124,7 +124,7 @@ export default function App() {
               <div className="flex-1 space-y-2">
                 <div className="flex items-center space-x-2">
                   <Sparkles className="h-4 w-4 text-[#AF9E81]" />
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#AF9E81] font-bold">Design Standard Validation</span>
+                  <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-widest text-[#AF9E81] font-bold">Design Standard Validation</span>
                 </div>
                 <h4 className="font-serif text-lg font-medium text-stone-900">
                   Biodynamic Terroir & Oak Aging Standards Certified
@@ -136,7 +136,7 @@ export default function App() {
 
               <div className="shrink-0 flex flex-col items-center">
                 <div className="text-center bg-[#FAF9F6] border border-[#EBE8E0] p-4 rounded-lg w-full md:w-auto">
-                  <p className="font-serif text-[11px] text-[#4A1521] leading-relaxed uppercase tracking-wider font-semibold">Active Credit Pool</p>
+                  <p className="font-serif text-xs font-semibold text-[#4A1521] leading-relaxed uppercase tracking-wider font-semibold">Active Credit Pool</p>
                   <p className="font-mono text-3xl font-normal text-stone-900 mt-1">450 <span className="text-xs text-[#AF9E81]">pts</span></p>
                   <p className="font-sans text-[9px] text-[#AF9E81] tracking-wider uppercase mt-1">Next rebate: $25 credit</p>
                 </div>
@@ -192,9 +192,9 @@ export default function App() {
                 <div className="bg-stone-900/60 p-3.5 rounded border border-stone-800 flex items-center justify-between">
                   <div>
                     <span className="font-sans text-[9px] uppercase tracking-wider text-stone-500 block">Community Solar Efficiency</span>
-                    <span className="font-mono text-xs font-bold text-[#FAF9F6]">94.2% <span className="text-stone-500 text-[10px] font-normal font-sans">Peak Fuel</span></span>
+                    <span className="font-mono text-xs font-bold text-[#FAF9F6]">94.2% <span className="text-stone-500 text-xs font-semibold tracking-wider font-normal font-sans">Peak Fuel</span></span>
                   </div>
-                  <span className="text-[10px] text-emerald-400 font-mono">+12.8 kW</span>
+                  <span className="text-xs font-semibold tracking-wider text-emerald-400 font-mono">+12.8 kW</span>
                 </div>
               </div>
 
@@ -215,7 +215,7 @@ export default function App() {
       </main>
 
       {/* Silent elegant copyright line */}
-      <footer className="border-t border-[#EBE8E0] py-8 text-center bg-[#FAF9F6] text-[10px] uppercase font-mono tracking-widest text-stone-400">
+      <footer className="border-t border-[#EBE8E0] py-8 text-center bg-[#FAF9F6] text-xs font-semibold tracking-wider uppercase font-mono tracking-widest text-stone-400">
         <div>© 2026 AURA RESERVE — Private Cellar &amp; Tasting Estate OS. All Member Allocations Verified.</div>
       </footer>
 
@@ -252,7 +252,7 @@ export default function App() {
               {/* 1-Click Auto-Fill Demo Passcode Cheat Code */}
               <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3.5 mb-6 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-amber-400 block font-semibold">
+                  <span className="text-xs font-semibold tracking-wider uppercase font-mono tracking-widest text-amber-400 block font-semibold">
                     1-CLICK CHEAT CODE (BUYER PREVIEW)
                   </span>
                   <span className="text-xs font-mono font-bold text-white tracking-wider">
@@ -273,7 +273,7 @@ export default function App() {
 
               <form onSubmit={handleAdminUnlock} className="space-y-4">
                 <div>
-                  <label className="block text-[11px] font-mono uppercase tracking-wider text-stone-400 mb-1">
+                  <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-stone-400 mb-1">
                     Cellar Passkey
                   </label>
                   <input
@@ -296,7 +296,7 @@ export default function App() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-2.5 bg-[#4A1521] hover:bg-[#5C1B2A] text-white font-semibold text-xs uppercase tracking-widest font-mono rounded-lg transition-all shadow cursor-pointer active:scale-95"
+                    className="flex-1 py-2.5 bg-[#4A1521] hover:bg-[#5C1B2A] text-white font-semibold text-base font-semibold min-h-[44px] uppercase tracking-widest font-mono rounded-lg transition-all shadow cursor-pointer active:scale-95"
                   >
                     Enter Control Room
                   </button>

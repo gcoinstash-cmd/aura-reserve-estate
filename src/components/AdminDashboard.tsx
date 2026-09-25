@@ -98,7 +98,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
             <h1 className="font-serif text-lg font-semibold tracking-wide text-white">
               AURA RESERVE • CELLAR MASTER COMMAND
             </h1>
-            <p className="text-[10px] font-mono text-stone-400 uppercase tracking-widest">
+            <p className="text-xs font-semibold tracking-wider font-mono text-stone-400 uppercase tracking-widest">
               Estate Operations &amp; Allocation Gateway • v1.0.0
             </p>
           </div>
@@ -112,7 +112,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
 
           <button
             onClick={onExit}
-            className="flex items-center space-x-2 px-4 py-2 bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-white border border-stone-800 rounded-lg text-xs font-mono transition-all cursor-pointer"
+            className="flex items-center space-x-2 px-5 py-3 min-h-[44px] bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-white border border-stone-800 rounded-lg text-base font-semibold min-h-[44px] font-mono transition-all cursor-pointer"
           >
             <LogOut size={14} />
             <span>Return to Public Estate</span>
@@ -130,7 +130,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
               <DollarSign size={14} className="text-[#AF9E81]" />
             </div>
             <p className="font-mono text-2xl font-bold text-white">$148,250</p>
-            <p className="text-[11px] text-emerald-400 font-mono mt-1">+18.4% vs last vintage</p>
+            <p className="text-xs font-semibold text-emerald-400 font-mono mt-1">+18.4% vs last vintage</p>
           </div>
 
           <div className="bg-[#161415] border border-stone-800 p-5 rounded-xl">
@@ -139,7 +139,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
               <Thermometer size={14} className="text-[#AF9E81]" />
             </div>
             <p className="font-mono text-2xl font-bold text-white">55°F / 72%</p>
-            <p className="text-[11px] text-emerald-400 font-mono mt-1">Optimal Oak Aging State</p>
+            <p className="text-xs font-semibold text-emerald-400 font-mono mt-1">Optimal Oak Aging State</p>
           </div>
 
           <div className="bg-[#161415] border border-stone-800 p-5 rounded-xl">
@@ -148,7 +148,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
               <Lock size={14} className="text-[#AF9E81]" />
             </div>
             <p className="font-mono text-2xl font-bold text-white">48 / 50</p>
-            <p className="text-[11px] text-amber-400 font-mono mt-1">96% Vault Capacity Filled</p>
+            <p className="text-xs font-semibold text-amber-400 font-mono mt-1">96% Vault Capacity Filled</p>
           </div>
 
           <div className="bg-[#161415] border border-stone-800 p-5 rounded-xl">
@@ -157,7 +157,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
               <Users size={14} className="text-[#AF9E81]" />
             </div>
             <p className="font-mono text-2xl font-bold text-white">12 Scheduled</p>
-            <p className="text-[11px] text-stone-400 font-mono mt-1">Next: Julian Rothschild (3 PM)</p>
+            <p className="text-xs font-semibold text-stone-400 font-mono mt-1">Next: Julian Rothschild (3 PM)</p>
           </div>
         </div>
 
@@ -232,7 +232,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
                   <div className="space-y-1">
                     <div className="flex items-center space-x-2">
                       <span className="font-serif text-base font-semibold text-white">{res.memberName}</span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-semibold">
+                      <span className="text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-semibold">
                         {res.memberTier}
                       </span>
                       <span className="text-xs font-mono text-stone-500">#{res.id}</span>
@@ -240,10 +240,10 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
                     <p className="text-xs text-stone-300 font-sans">
                       <span className="text-[#AF9E81] font-semibold">{res.experience}</span> • {res.guestsCount} Patrons
                     </p>
-                    <p className="text-[11px] text-stone-400 font-mono">
+                    <p className="text-xs font-semibold text-stone-400 font-mono">
                       📅 {res.date} at {res.timeSlot} • Assigned: {res.sommelier}
                     </p>
-                    <p className="text-[11px] text-stone-400 italic">
+                    <p className="text-xs font-semibold text-stone-400 italic">
                       "{res.allocationNotes}"
                     </p>
                   </div>
@@ -293,7 +293,7 @@ export function AdminDashboard({ onExit }: AdminDashboardProps) {
                 <div key={i} className="bg-[#110F10] border border-stone-800 p-3 rounded-lg flex items-center justify-between">
                   <div>
                     <span className="font-mono text-xs font-bold text-white">VAULT #{i + 70}</span>
-                    <span className="block text-[10px] text-stone-400 font-mono">{i === 14 ? 'VACANT' : 'ALLOCATED'}</span>
+                    <span className="block text-xs font-semibold tracking-wider text-stone-400 font-mono">{i === 14 ? 'VACANT' : 'ALLOCATED'}</span>
                   </div>
                   <span className={`w-2 h-2 rounded-full ${i === 14 ? 'bg-stone-600' : 'bg-emerald-400'}`}></span>
                 </div>

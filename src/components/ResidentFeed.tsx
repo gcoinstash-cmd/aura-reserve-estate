@@ -136,7 +136,7 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
             <button
               key={cat}
               onClick={() => setSelectedFilter(cat)}
-              className={`text-[10px] uppercase font-semibold tracking-wider px-3 py-1.5 transition-all rounded-sm ${
+              className={`text-xs font-semibold tracking-wider uppercase font-semibold tracking-wider px-3 py-1.5 transition-all rounded-sm ${
                 selectedFilter === cat
                   ? 'bg-white text-[#4A1521] shadow-2xs font-bold border-l-2 border-[#4A1521]'
                   : 'text-stone-500 hover:text-stone-900 border-l border-transparent'
@@ -236,7 +236,7 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                           {item.content}
                         </p>
 
-                        <div className="flex items-center justify-between text-[11px] text-stone-400">
+                        <div className="flex items-center justify-between text-xs font-semibold text-stone-400">
                           <span>Filing authority: <strong>{item.author}</strong></span>
                           <span>Bylaw Code Validation: Verified</span>
                         </div>
@@ -255,7 +255,7 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                         }`}
                       >
                         <Heart className={`h-4 w-4 ${item.likedByUser ? 'fill-current' : ''}`} />
-                        <span className="font-mono text-[11px]">{item.likesCount}</span>
+                        <span className="font-mono text-xs font-semibold">{item.likesCount}</span>
                       </button>
 
                       {/* Comments count Toggle */}
@@ -266,7 +266,7 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                         }`}
                       >
                         <MessageSquare className="h-4 w-4" />
-                        <span className="font-mono text-[11px]">{comments.length}</span>
+                        <span className="font-mono text-xs font-semibold">{comments.length}</span>
                       </button>
 
                       {/* Expand Button */}
@@ -289,7 +289,7 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                     </div>
 
                     <div className="flex items-center space-x-3">
-                      <span className="text-[10px] text-stone-400 font-mono italic hidden md:inline">Issued by {item.author}</span>
+                      <span className="text-xs font-semibold tracking-wider text-stone-400 font-mono italic hidden md:inline">Issued by {item.author}</span>
                     </div>
                   </div>
 
@@ -303,18 +303,18 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                             Active Reservations: <strong className="font-mono font-bold text-stone-900">{item.rsvpCount}</strong> attending
                           </span>
                         </div>
-                        <span className="text-[10px] text-stone-400 uppercase tracking-wider font-semibold">Social RSVP Registry</span>
+                        <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-wider font-semibold">Social RSVP Registry</span>
                       </div>
 
                       <div className="flex items-center space-x-2">
-                        <span className="text-[10px] text-stone-400 uppercase tracking-widest font-semibold mr-1">Your Attendance:</span>
+                        <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest font-semibold mr-1">Your Attendance:</span>
                         {['Going', 'Maybe', 'Not Going'].map((status) => {
                           const isActive = item.rsvpStatus === status;
                           return (
                             <button
                               key={status}
                               onClick={() => handleRSVP(item.id, status as FeedItem['rsvpStatus'])}
-                              className={`text-[10px] font-semibold px-2.5 py-1 transition-all rounded-xs border ${
+                              className={`text-xs font-semibold tracking-wider font-semibold px-2.5 py-1 transition-all rounded-xs border ${
                                 isActive 
                                   ? 'bg-[#4A1521] text-white border-[#4A1521]' 
                                   : 'bg-white hover:bg-stone-50 border-stone-200 text-stone-600'
@@ -341,11 +341,11 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                         <div className="space-y-3 max-h-[160px] overflow-y-auto pr-1">
                           {comments.map((comment, index) => (
                             <div key={index} className="bg-stone-50 p-2.5 rounded border border-[#EBE8E0]/50">
-                              <div className="flex justify-between items-center mb-1 text-[10px] text-stone-400 font-mono">
+                              <div className="flex justify-between items-center mb-1 text-xs font-semibold tracking-wider text-stone-400 font-mono">
                                 <span className="font-bold text-stone-700">{comment.author}</span>
                                 <span>{comment.time}</span>
                               </div>
-                              <p className="text-stone-600 text-[11px] leading-relaxed">{comment.text}</p>
+                              <p className="text-stone-600 text-xs font-semibold leading-relaxed">{comment.text}</p>
                             </div>
                           ))}
                         </div>
@@ -362,7 +362,7 @@ export default function ResidentFeed({ feedItems, onUpdateFeedItem }: ResidentFe
                           />
                           <button
                             type="submit"
-                            className="bg-stone-900 text-white font-serif tracking-wide hover:bg-black px-4 py-2 text-[11px] transition-colors shrink-0 rounded"
+                            className="bg-stone-900 text-white font-serif tracking-wide hover:bg-black px-5 py-3 min-h-[44px] text-base font-semibold min-h-[44px] font-semibold transition-colors shrink-0 rounded"
                           >
                             Post Brief
                           </button>

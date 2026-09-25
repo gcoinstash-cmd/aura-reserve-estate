@@ -227,7 +227,7 @@ export default function QuickActions({
           <h3 className="font-serif text-lg font-medium text-[#121212] tracking-wide">
             Quick Actions Registry
           </h3>
-          <span className="font-sans text-[10px] tracking-widest uppercase text-stone-400 font-semibold">
+          <span className="font-sans text-xs font-semibold tracking-wider tracking-widest uppercase text-stone-400 font-semibold">
             Active Security Encryption
           </span>
         </div>
@@ -252,7 +252,7 @@ export default function QuickActions({
               <CreditCard className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-sans text-[10px] uppercase tracking-wider text-stone-400 font-medium">Financial Gateway</p>
+              <p className="font-sans text-xs font-semibold tracking-wider uppercase tracking-wider text-stone-400 font-medium">Financial Gateway</p>
               <h4 className="font-serif text-base font-medium text-[#121212] group-hover:text-[#4A1521] transition-colors mt-0.5 flex items-center justify-between">
                 <span>Make a Payment</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#4A1521]" />
@@ -276,7 +276,7 @@ export default function QuickActions({
               <Wrench className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-sans text-[10px] uppercase tracking-wider text-stone-400 font-medium">Service Lodge</p>
+              <p className="font-sans text-xs font-semibold tracking-wider uppercase tracking-wider text-stone-400 font-medium">Service Lodge</p>
               <h4 className="font-serif text-base font-medium text-[#121212] group-hover:text-[#4A1521] transition-colors mt-0.5 flex items-center justify-between">
                 <span>Submit a Request</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#4A1521]" />
@@ -300,7 +300,7 @@ export default function QuickActions({
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-sans text-[10px] uppercase tracking-wider text-stone-400 font-medium">Smart Locker & Gate</p>
+              <p className="font-sans text-xs font-semibold tracking-wider uppercase tracking-wider text-stone-400 font-medium">Smart Locker & Gate</p>
               <h4 className="font-serif text-base font-medium text-[#121212] group-hover:text-[#4A1521] transition-colors mt-0.5 flex items-center justify-between">
                 <span>Owner Dashboard</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#4A1521]" />
@@ -324,7 +324,7 @@ export default function QuickActions({
               <FileLock2 className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-sans text-[10px] uppercase tracking-wider text-stone-400 font-medium">Bylaws & Audits</p>
+              <p className="font-sans text-xs font-semibold tracking-wider uppercase tracking-wider text-stone-400 font-medium">Bylaws & Audits</p>
               <h4 className="font-serif text-base font-medium text-[#121212] group-hover:text-[#4A1521] transition-colors mt-0.5 flex items-center justify-between">
                 <span>Documents & Forms</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#4A1521]" />
@@ -399,7 +399,7 @@ export default function QuickActions({
                         >
                           <div>
                             <p className="text-xs font-semibold text-stone-800">{p.category}</p>
-                            <p className="text-[10px] text-stone-400 mt-0.5">Assessment Date: {p.date}</p>
+                            <p className="text-xs font-semibold tracking-wider text-stone-400 mt-0.5">Assessment Date: {p.date}</p>
                           </div>
                           <div className="text-right">
                             <span className="font-mono text-sm font-bold text-[#4A1521]">${p.amount.toFixed(2)}</span>
@@ -464,16 +464,16 @@ export default function QuickActions({
                     <form onSubmit={handleProcessPayment} className="space-y-4">
                       <div>
                         <h4 className="font-serif text-sm text-stone-900 font-semibold mb-1">Financial Settlement Details</h4>
-                        <p className="text-stone-400 text-[11px]">Authorize bank debit instantly via high-speed clearing.</p>
+                        <p className="text-stone-400 text-xs font-semibold">Authorize bank debit instantly via high-speed clearing.</p>
                       </div>
 
                       {/* Display Selected Amount */}
                       <div className="bg-[#FAF9F6] p-4 rounded border border-[#EBE8E0] text-center">
-                        <p className="text-[10px] uppercase tracking-wider text-stone-400">Total Authorized Amount</p>
+                        <p className="text-xs font-semibold tracking-wider uppercase tracking-wider text-stone-400">Total Authorized Amount</p>
                         <p className="font-mono text-3xl font-bold text-[#4A1521] mt-1">
                           ${selectedPayment ? selectedPayment.amount.toFixed(2) : (parseFloat(customAmount) || 0).toFixed(2)}
                         </p>
-                        <p className="text-[10px] text-stone-500 mt-1">
+                        <p className="text-xs font-semibold tracking-wider text-stone-500 mt-1">
                           {selectedPayment ? `Payment for: ${selectedPayment.category}` : "Custom Reservoir Offering"}
                         </p>
                       </div>
@@ -482,7 +482,7 @@ export default function QuickActions({
                         {/* Custom amount toggle if no payment selected */}
                         {!selectedPayment && (
                           <div>
-                            <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Custom Settlement Amount ($)</label>
+                            <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Custom Settlement Amount ($)</label>
                             <input
                               type="number"
                               required
@@ -498,17 +498,17 @@ export default function QuickActions({
                           <button
                             type="button"
                             onClick={() => setSelectedPayment(null)}
-                            className="text-[10px] text-stone-500 hover:text-[#4A1521] underline font-medium"
+                            className="text-xs font-semibold tracking-wider text-stone-500 hover:text-[#4A1521] underline font-medium"
                           >
                             Or input a custom payment instead
                           </button>
                         )}
 
                         <div>
-                          <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Payer Verification Details</label>
+                          <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Payer Verification Details</label>
                           <div className="p-3 bg-stone-50 rounded border border-[#EBE8E0] text-xs">
                             <p className="text-stone-700 font-medium">Verified Account: Checking *8912</p>
-                            <p className="text-stone-400 mt-0.5 text-[10px]">Evelyn Vance • Routing ending in *1014</p>
+                            <p className="text-stone-400 mt-0.5 text-xs font-semibold tracking-wider">Evelyn Vance • Routing ending in *1014</p>
                           </div>
                         </div>
                       </div>
@@ -516,7 +516,7 @@ export default function QuickActions({
                       <button
                         type="submit"
                         disabled={isProcessingPayment}
-                        className="w-full bg-[#4A1521] hover:bg-[#5C1D24] text-white font-serif py-3 rounded text-xs transition-colors flex items-center justify-center space-x-2 disabled:bg-stone-300 shadow-xs"
+                        className="w-full bg-[#4A1521] hover:bg-[#5C1D24] text-white font-serif py-3 rounded text-base font-semibold min-h-[44px] transition-colors flex items-center justify-center space-x-2 disabled:bg-stone-300 shadow-xs"
                       >
                         {isProcessingPayment ? (
                           <>
@@ -550,21 +550,21 @@ export default function QuickActions({
                       <Clock className="h-4 w-4 text-[#AF9E81] shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-stone-800">Review Timeline SLA</p>
-                        <p className="text-stone-400 text-[10px] mt-0.5">Architectural modifications are audited within 7 days. Urgent leaks are triaged within 2 hours.</p>
+                        <p className="text-stone-400 text-xs font-semibold tracking-wider mt-0.5">Architectural modifications are audited within 7 days. Urgent leaks are triaged within 2 hours.</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-2 text-xs">
                       <ShieldCheck className="h-4 w-4 text-[#4A1521] shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-stone-800">Approved Contractor Access</p>
-                        <p className="text-stone-400 text-[10px] mt-0.5">Licensed community contractors will undergo automatic background validation prior to arriving at your townhouse.</p>
+                        <p className="text-stone-400 text-xs font-semibold tracking-wider mt-0.5">Licensed community contractors will undergo automatic background validation prior to arriving at your townhouse.</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Active submitted list */}
                   <div className="space-y-2">
-                    <h5 className="text-[10px] font-semibold uppercase tracking-wider text-stone-400">Current Filed Log</h5>
+                    <h5 className="text-xs font-semibold tracking-wider font-semibold uppercase tracking-wider text-stone-400">Current Filed Log</h5>
                     <div className="space-y-2 max-h-[170px] overflow-y-auto pr-1">
                       {requests.map((r) => (
                         <div key={r.id} className="p-3 bg-white hover:bg-stone-50 rounded border border-[#EBE8E0] text-xs flex justify-between items-center transition-all">
@@ -600,12 +600,12 @@ export default function QuickActions({
                 <form onSubmit={handleSubmitRequest} className="space-y-4 bg-white p-6 rounded-lg border border-[#EBE8E0] shadow-2xs">
                   <div>
                     <h4 className="font-serif text-sm text-stone-900 font-semibold mb-1">New Service Application</h4>
-                    <p className="text-stone-400 text-[11px]">Describe details accurately for direct dispatch validation.</p>
+                    <p className="text-stone-400 text-xs font-semibold">Describe details accurately for direct dispatch validation.</p>
                   </div>
 
                   <div className="space-y-3">
                     <div>
-                      <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Subject Title</label>
+                      <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Subject Title</label>
                       <input
                         type="text"
                         required
@@ -618,7 +618,7 @@ export default function QuickActions({
 
                     <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Assigned Division</label>
+                        <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Assigned Division</label>
                         <select
                           value={requestCategory}
                           onChange={(e) => setRequestCategory(e.target.value as MaintenanceRequest['category'])}
@@ -633,7 +633,7 @@ export default function QuickActions({
                       </div>
 
                       <div>
-                        <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Priority Triage</label>
+                        <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Priority Triage</label>
                         <select
                           value={requestPriority}
                           onChange={(e) => setRequestPriority(e.target.value as MaintenanceRequest['priority'])}
@@ -647,7 +647,7 @@ export default function QuickActions({
                     </div>
 
                     <div>
-                      <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Filing Description</label>
+                      <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Filing Description</label>
                       <textarea
                         required
                         rows={3}
@@ -662,7 +662,7 @@ export default function QuickActions({
                   <button
                     type="submit"
                     id="submit-btn-check"
-                    className="w-full bg-[#4A1521] hover:bg-[#5C1D24] text-white font-serif py-3 rounded text-xs transition-colors flex items-center justify-center space-x-2"
+                    className="w-full bg-[#4A1521] hover:bg-[#5C1D24] text-white font-serif py-3 rounded text-base font-semibold min-h-[44px] transition-colors flex items-center justify-center space-x-2"
                   >
                     Submit Architectural & Service Filing
                   </button>
@@ -684,7 +684,7 @@ export default function QuickActions({
                       Book a private slot in the executive clubhouse workspace lounge, swimming pool private cabanas, or sports tennis & pickleball courts.
                     </p>
                     <div className="pt-2">
-                      <span className="text-[10px] uppercase tracking-wider bg-amber-50 text-[#4A1521] border border-[#4A1521]/10 px-2.5 py-1 rounded font-semibold block w-fit">
+                      <span className="text-xs font-semibold tracking-wider uppercase tracking-wider bg-amber-50 text-[#4A1521] border border-[#4A1521]/10 px-2.5 py-1 rounded font-semibold block w-fit">
                         Resident Privilege: Active
                       </span>
                     </div>
@@ -700,11 +700,11 @@ export default function QuickActions({
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                       <div className="space-y-1">
-                        <span className="text-stone-400 text-[10px] uppercase font-semibold">Smart Lockers Assigned</span>
+                        <span className="text-stone-400 text-xs font-semibold tracking-wider uppercase font-semibold">Smart Lockers Assigned</span>
                         <p className="text-stone-800 text-xs font-medium">Locker Box #42 (Parcel cleared at 10:14 AM)</p>
                       </div>
                       <div className="space-y-1">
-                        <span className="text-stone-400 text-[10px] uppercase font-semibold">HOA Parking Stall</span>
+                        <span className="text-stone-400 text-xs font-semibold tracking-wider uppercase font-semibold">HOA Parking Stall</span>
                         <p className="text-stone-800 text-xs font-medium">Bay 42-B (Covered - Automated EV Charger connected)</p>
                       </div>
                     </div>
@@ -720,7 +720,7 @@ export default function QuickActions({
                     <form onSubmit={handleRegisterGuest} className="space-y-3 bg-white p-5 rounded-lg border border-[#EBE8E0] shadow-2xs">
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Guest Full Name</label>
+                          <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Guest Full Name</label>
                           <input
                             type="text"
                             required
@@ -731,7 +731,7 @@ export default function QuickActions({
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Vehicle License Plate</label>
+                          <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Vehicle License Plate</label>
                           <input
                             type="text"
                             required
@@ -745,7 +745,7 @@ export default function QuickActions({
 
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="block text-[10px] uppercase tracking-wider text-stone-500 font-semibold mb-1">Duration Cycle</label>
+                          <label className="block text-sm font-semibold tracking-wider uppercase tracking-wider text-stone-500 font-semibold mb-1">Duration Cycle</label>
                           <select
                             value={passDuration}
                             onChange={(e) => setPassDuration(e.target.value)}
@@ -759,7 +759,7 @@ export default function QuickActions({
                         <div className="flex items-end">
                           <button
                             type="submit"
-                            className="w-full bg-[#4A1521] hover:bg-[#5C1D24] text-white font-serif py-2 rounded text-xs transition-colors flex items-center justify-center space-x-1"
+                            className="w-full bg-[#4A1521] hover:bg-[#5C1D24] text-white font-serif py-2 rounded text-base font-semibold min-h-[44px] transition-colors flex items-center justify-center space-x-1"
                           >
                             <Plus className="h-4 w-4" />
                             <span>Create Pass</span>
@@ -776,9 +776,9 @@ export default function QuickActions({
                         className="bg-white p-4 border border-[#4A1521]/20 rounded-lg flex items-center justify-between shadow-2xs"
                       >
                         <div className="space-y-1">
-                          <p className="text-[10px] uppercase tracking-widest text-[#AF9E81] font-bold">Pass Authorized</p>
+                          <p className="text-xs font-semibold tracking-wider uppercase tracking-widest text-[#AF9E81] font-bold">Pass Authorized</p>
                           <p className="text-xs font-bold text-stone-800">{newlyCreatedPass.guestName}</p>
-                          <p className="text-[10px] text-stone-500">Plate: {newlyCreatedPass.vehiclePlate} • Valid: {newlyCreatedPass.duration}</p>
+                          <p className="text-xs font-semibold tracking-wider text-stone-500">Plate: {newlyCreatedPass.vehiclePlate} • Valid: {newlyCreatedPass.duration}</p>
                           <p className="font-mono text-xs font-bold text-[#4A1521]">{newlyCreatedPass.passCode}</p>
                         </div>
                         <div className="flex flex-col items-center justify-center border-l border-stone-200 pl-4">
@@ -867,7 +867,7 @@ export default function QuickActions({
 
                 {/* Documents Table */}
                 <div className="bg-white border border-[#EBE8E0] rounded overflow-hidden shadow-3xs">
-                  <div className="grid grid-cols-12 bg-[#FAF9F6] py-3 px-4 border-b border-[#EBE8E0] text-[10px] uppercase font-semibold text-stone-500 tracking-wider">
+                  <div className="grid grid-cols-12 bg-[#FAF9F6] py-3 px-4 border-b border-[#EBE8E0] text-xs font-semibold tracking-wider uppercase font-semibold text-stone-500 tracking-wider">
                     <div className="col-span-6 md:col-span-7">Document Name</div>
                     <div className="col-span-3 md:col-span-2">Archive Group</div>
                     <div className="col-span-3 md:col-span-3 text-right">Size / Retrieve</div>
@@ -891,7 +891,7 @@ export default function QuickActions({
                             </span>
                           </div>
                           <div className="col-span-3 md:col-span-3 text-right flex items-center justify-end space-x-3">
-                            <span className="font-mono text-[10px] text-stone-400 hidden sm:inline">{doc.fileSize}</span>
+                            <span className="font-mono text-xs font-semibold tracking-wider text-stone-400 hidden sm:inline">{doc.fileSize}</span>
                             <button
                               onClick={() => handleDownloadDoc(doc.id)}
                               disabled={downloadingDocId !== null}
@@ -900,7 +900,7 @@ export default function QuickActions({
                               {downloadingDocId === doc.id ? (
                                 <>
                                   <Loader2 className="h-3 w-3 animate-spin" />
-                                  <span className="text-[10px]">Pulling...</span>
+                                  <span className="text-xs font-semibold tracking-wider">Pulling...</span>
                                 </>
                               ) : (
                                 <>
@@ -916,7 +916,7 @@ export default function QuickActions({
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-2 text-[10px] text-stone-400 italic">
+                <div className="flex items-center space-x-2 text-xs font-semibold tracking-wider text-stone-400 italic">
                   <span>Vault status as of today: All signatures logged on-chain. SHA-256 compliant.</span>
                 </div>
               </div>

@@ -26,7 +26,7 @@ export default function Header({ onOpenAdminModal }: HeaderProps) {
             <h1 className="font-serif text-xl font-semibold tracking-wide text-[#121212] sm:text-2xl">
               AURA RESERVE
             </h1>
-            <p className="font-sans text-[10px] tracking-widest uppercase text-[#AF9E81] font-medium">
+            <p className="font-sans text-xs font-semibold tracking-wider tracking-widest uppercase text-[#AF9E81] font-medium">
               Private Vineyard &amp; Tasting Estate OS
             </p>
           </div>
@@ -55,7 +55,7 @@ export default function Header({ onOpenAdminModal }: HeaderProps) {
         <div className="flex items-center space-x-4">
           <button
             onClick={onOpenAdminModal}
-            className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1.5 rounded bg-amber-500/10 text-amber-800 border border-amber-500/30 hover:bg-amber-500 hover:text-black font-semibold transition-all flex items-center space-x-1 cursor-pointer"
+            className="text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono uppercase tracking-widest px-2.5 py-1.5 rounded bg-amber-500/10 text-amber-800 border border-amber-500/30 hover:bg-amber-500 hover:text-black font-semibold transition-all flex items-center space-x-1 cursor-pointer"
           >
             <span>⚡ ADMIN PASS</span>
           </button>
@@ -87,7 +87,7 @@ export default function Header({ onOpenAdminModal }: HeaderProps) {
             </div>
             <div className="text-left hidden md:block">
               <p className="font-sans text-xs font-semibold text-[#121212]">Evelyn Vance</p>
-              <p className="font-sans text-[10px] text-stone-400">Collector Tier • Vault #84</p>
+              <p className="font-sans text-xs font-semibold tracking-wider text-stone-400">Collector Tier • Vault #84</p>
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ export default function HeroBanner() {
         {/* Floating Accent Ring */}
         <div className="absolute top-6 left-6 z-20 hidden md:flex items-center space-x-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 backdrop-blur-md">
           <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-sans text-[10px] tracking-wider text-white uppercase font-medium">Cellar Security: Biometric Vault Active</span>
+          <span className="font-sans text-xs font-semibold tracking-wider tracking-wider text-white uppercase font-medium">Cellar Security: Biometric Vault Active</span>
         </div>
 
         {/* Content Overlaid Content */}
@@ -34,7 +34,7 @@ export default function HeroBanner() {
             <h2 className="font-serif text-3xl md:text-5xl font-normal leading-tight tracking-wide text-white">
               Welcome back to <span className="font-serif italic font-extralight text-[#FAF9F6] border-b border-white/30">Aura Reserve</span>.
             </h2>
-            <p className="font-sans text-xs md:text-sm text-stone-300 font-light leading-relaxed max-w-md">
+            <p className="font-sans text-base font-semibold text-stone-300 font-light leading-relaxed max-w-md">
               An exclusive Napa Valley reserve estate dedicated to single-vineyard Cabernet Sauvignon, biodynamic viticulture, and bespoke omakase tasting salons.
             </p>
           </motion.div>
@@ -51,7 +51,7 @@ export default function HeroBanner() {
                 <Thermometer className="h-4 w-4 text-[#FAF9F6]" />
               </div>
               <div>
-                <p className="text-white/60 text-[10px] uppercase tracking-wider font-light">Ambient Temp</p>
+                <p className="text-white/60 text-xs font-semibold tracking-wider uppercase tracking-wider font-light">Ambient Temp</p>
                 <p className="font-mono text-sm font-semibold text-white">68°F / Napa Valley Sun</p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function HeroBanner() {
                 <Droplet className="h-4 w-4 text-[#FAF9F6]" />
               </div>
               <div>
-                <p className="text-white/60 text-[10px] uppercase tracking-wider font-light">Solar Generation</p>
+                <p className="text-white/60 text-xs font-semibold tracking-wider uppercase tracking-wider font-light">Solar Generation</p>
                 <p className="font-mono text-sm font-semibold text-white">12.8 kW (Peak)</p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function HeroBanner() {
                 <Compass className="h-4 w-4 text-[#AF9E81]" />
               </div>
               <div>
-                <p className="text-white/76 text-[10px] font-medium text-[#AF9E81] uppercase tracking-wider">Crest Social</p>
+                <p className="text-white/76 text-xs font-semibold tracking-wider font-medium text-[#AF9E81] uppercase tracking-wider">Crest Social</p>
                 <p className="font-serif italic text-xs text-white">BBQ & Poolside Social</p>
               </div>
             </div>
